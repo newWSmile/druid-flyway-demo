@@ -43,7 +43,7 @@ public class DruidDataSourceAutoConfigure {
     @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource druidDataSource() {
         LOGGER.info("Init DruidDataSource");
-        return new DruidDataSource();
+        return new DruidDataSourceWrapper();
     }
 
 
