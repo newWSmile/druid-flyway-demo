@@ -1,0 +1,8 @@
+CREATE TABLE `article_content` (
+	`id` BIGINT (20) NOT NULL AUTO_INCREMENT COMMENT 'id',
+	`article_id` BIGINT (20) NOT NULL DEFAULT '0' COMMENT '文章ID',
+	`content` longtext DEFAULT NULL COMMENT '文章内容',
+	`create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	`update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+	PRIMARY KEY (`id`)
+) ENGINE = INNODB DEFAULT CHARSET = utf8mb4 COMMENT = '文章内容表';
